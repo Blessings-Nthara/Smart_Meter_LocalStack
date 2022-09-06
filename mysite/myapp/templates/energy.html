@@ -1,0 +1,50 @@
+<div id="energy_trans">
+    <div class="row row-cols-1 row-cols-md-1 g-1">
+        <div class="card h-100  mb-1 bg-gradient">
+            <div class="card-header bg-gradient text-dark fs-3"></strong> </strong> </div>
+            <div class="card-body ">
+                <table id="national_table" class="display table bg-gradient table-bordered text-dark text-center" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th colspan="7">{{customers.first_name.S}} {{ customers.last_name.S }} Electricity Consuption Table
+                            </th>
+                            <th colspan="7" style="color: red;">
+                              Remaining Balance:  € {{ customers.balance.N}}
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Meter Number</th>
+                            <th>Address</th>
+                            <th>Date</th>
+                            <th>Energy Consumed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for consumption in energy_consumption_list %}
+                        <tr>
+                            <td>{{ customers.first_name.S }}</td>
+                            <td>{{ customers.last_name.S }}</td>
+                            <td>{{ customers.phone_number.S }}</td>
+                            <td>{{ customers.email.S}}</td>
+                            <td>{{ customers.smart_meter_msn.S}}</td>
+                            <td>{{ customers.address.M.street.S}} {{ customers.address.M.house_number.S}} {{ customers.address.M.city.S}}</td>
+                            <td>{{ consumption.date}}</td>
+                            <td>{{ consumption.energy}}</td>
+                
+                
+                        </tr>
+                    {% endfor %}
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>
