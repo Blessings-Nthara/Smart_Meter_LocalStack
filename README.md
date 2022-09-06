@@ -28,7 +28,7 @@
 
 ### Thirdly we need to run our generatedata.py script inorder to simulate our smart meter . This script will send us data every minute and our lambda function will perform all the necessary operations such as measuring the energy used and deducting from the customers Balance. It is assumed that a customer prepays for the electricity and according to the energy used the balance is deducted.
 
-### Lastly the django server should be started and once it starts successfully this link (http://localhost:8000/app/) should be visited to see all the analytics. From the mentioned link we can see how much energy is performed at a particular time both in a table form and on graph.
+### Lastly the django server should be started. To start django we need to navigate to mysites directory and run the command (python .\manage.py runserver) and once it starts successfully we should visit (http://localhost:8000/app/)  to see all the analytics. From the mentioned link we can see how much energy is performed at a particular time both in a table form and on graph.
 
 
 
